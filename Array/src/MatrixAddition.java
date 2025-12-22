@@ -1,6 +1,7 @@
 import java.util.Scanner; // Used to take input from the user
 
-public class MatrixSubtraction {
+public class MatrixAddition 
+{
     Scanner scan;
     int matrix1[][], matrix2[][], sub[][];
     int row, column;
@@ -8,7 +9,7 @@ public class MatrixSubtraction {
     void create() {
         scan = new Scanner(System.in);
 
-        System.out.println("Matrix Subtraction");
+        System.out.println("Matrix Addition");
 
 //        First Matrix Creation
         System.out.println("\nEnter number of rows and columns");
@@ -66,10 +67,10 @@ public class MatrixSubtraction {
         {
             for (int j = 0; j < column; j++)
             {
-                sub[i][j] = matrix1[i][j] + matrix2[i][j];
+                sub[i][j] = matrix1[i][j] - matrix2[i][j];
             }
         }
-        System.out.println("\n\nThe Subtraction is:");
+        System.out.println("\n\nThe Addition is:");
         for (int i = 0; i < row; i++)
         {
             for (int j = 0; j < column; j++)
@@ -80,11 +81,11 @@ public class MatrixSubtraction {
         }
     }
 }
-class MatrixSubtractionExample
+class MatrixAdditionExample
 {
     public static void main(String[] args)
     {
-        MatrixSubtraction obj = new MatrixSubtraction();
+        MatrixAddition obj = new MatrixAddition();
         obj.create();
         obj.display();
         obj.sub();
